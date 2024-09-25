@@ -22,7 +22,7 @@ curl -O https://raw.githubusercontent.com/wt195799611/nillion_verifier_monitorin
 chmod +x update_node.sh
 ```
 
-### 如有更新，更新脚本
+### 运行脚本，如有更新，重复运行此命令即可
 ```bash
 ./update_node.sh
 ```
