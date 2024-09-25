@@ -29,7 +29,7 @@ chmod +x update_node.sh
 
 ### 查看脚本运行情况
 ```bash
-screen -S nillion_monitor
+screen -r nillion_monitor
 ```
 
 在 `screen` 会话中查看日志，按 Ctrl + A 然后按 D 即可退出会话。
