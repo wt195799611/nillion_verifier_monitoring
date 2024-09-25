@@ -37,7 +37,7 @@ run_container() {
         -v $HOME/nillion/accuser:/var/tmp \
         --log-opt max-size=1000m \
         --log-opt max-file=3 \
-        nillion/retailtoken-accuser:v1.0.0 \
+        nillion/retailtoken-accuser:v2.0.3 \
         accuse --rpc-endpoint "$RANDOM_RPC" --block-start "$START_BLOCK"
 }
 
