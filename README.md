@@ -26,6 +26,7 @@ chmod +x update_node.sh
 ```bash
 ./update_node.sh
 ```
+看到日之后，按 Ctrl + A 然后按 D 即可退出会话。
 
 ### 查看脚本运行情况
 ```bash
