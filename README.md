@@ -1,4 +1,4 @@
-# Nillion 验证者自动检测脚本
+# Nillion 验证者自动运维脚本
 
 本脚本适用于 **Ubuntu 22.04**，每 5 分钟自动检查 Docker 容器 `nillion4` 的状态和日志。如果容器状态异常或日志中连续出现 RPC 错误，则删除现有容器并重启，同时随机选择一个 RPC 地址。
 
@@ -20,3 +20,16 @@
 ```bash
 curl -O https://raw.githubusercontent.com/wt195799611/nillion_verifier_monitoring/main/update_nod.sh
 chmod +x update_nod.sh
+```
+
+### 如有更新，更新脚本
+```bash
+./update_nod.sh
+```
+
+### 查看脚本运行情况
+```bash
+screen -S nillion_monitor
+```
+
+在 `screen` 会话中查看日志，按 Ctrl + A 然后按 D 即可退出会话。
