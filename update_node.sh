@@ -4,14 +4,17 @@
 echo "当前 screen 会话列表:"
 screen -ls
 
-# 杀掉名为 'nillion_monitor' 的 screen 会话
-SCREEN_SESSIONS=$(screen -ls | grep -o '[0-9]*\.' | sed 's/\.//g')
+# 杀掉所有名为 'nillion_monitor' 的 screen 会话
+echo "正在杀死所有 nillion_monitor 会话..."
 
-if [[ -n "$SCREEN_SESSIONS" ]]; then
-    echo "正在杀死所有相关 screen 会话..."
-    screen -ls | grep 'nillion_monitor' | grep -o '[0-9]*\.' | sed 's/\.//g' | xargs kill
+# 获取所有 nillion_monitor 会话的 PID
+SESSION_IDS=$(screen -ls | grep 'nillion_monitor' | awk '{print $1}' | cut -d '.' -f 1)
+
+if [[ -n "$SESSION_IDS" ]]; then
+    echo "$SESSION_IDS" | xargs kill
+    echo "已杀死所有 nillion_monitor 会话。"
 else
-    echo "没有找到相关的 screen 会话。"
+    echo "没有找到 nillion_monitor 会话。"
 fi
 
 # 下载最新版本的 node.sh
