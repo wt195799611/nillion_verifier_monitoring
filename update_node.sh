@@ -26,6 +26,6 @@ chmod +x node.sh
 
 # 创建新的 screen 会话并在后台运行新脚本
 echo "正在创建新的 screen 会话并运行脚本..."
-screen -dmS nillion_monitor ./node.sh
+screen -S nillion_monitor ./node.sh
 
 echo "脚本已更新并在新的 screen 会话中运行。"
