@@ -17,7 +17,7 @@ run_container() {
 
     sudo docker run -d \
         --name $CONTAINER_NAME \
-        -v $HOME/nillion/verifier:/var/tmp \
+        -v $HOME/nillion/accuser:/var/tmp \
         --log-opt max-size=1000m \
         --log-opt max-file=3 \
         nillion/verifier:v1.0.0 \
