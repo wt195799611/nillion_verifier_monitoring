@@ -18,13 +18,13 @@
 
 ### 第一次安装脚本
 ```bash
-curl -O https://raw.githubusercontent.com/wt195799611/nillion_verifier_monitoring/main/update_nod.sh
-chmod +x update_nod.sh
+curl -O https://raw.githubusercontent.com/wt195799611/nillion_verifier_monitoring/main/update_node.sh
+chmod +x update_node.sh
 ```
 
 ### 如有更新，更新脚本
 ```bash
-./update_nod.sh
+./update_node.sh
 ```
 
 ### 查看脚本运行情况
