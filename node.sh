@@ -8,7 +8,7 @@ RPC_ENDPOINTS=(
 )
 
 # 定义 Docker 容器名称
-CONTAINER_NAME="nillion4"
+CONTAINER_NAME="nillion5"
 
 # 定义启动容器的命令
 run_container() {
