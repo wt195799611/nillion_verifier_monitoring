@@ -20,7 +20,7 @@ run_container() {
         -v $HOME/nillion/accuser:/var/tmp \
         --log-opt max-size=1000m \
         --log-opt max-file=3 \
-        nillion/verifier:v1.0.0 \
+        nillion/verifier:v1.0.1 \
         verify --rpc-endpoint "$RANDOM_RPC"
 }
 
