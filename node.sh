@@ -55,8 +55,8 @@ check_container_logs() {
         return
     fi
 
-    TIMEOUT_ERRORS=$(echo "$LAST_LOGS" | grep -A 1 "request or response body error: operation timed out")
-    if [[ $(echo "$TIMEOUT_ERRORS" | grep -c "request or response body error: operation timed out") -ge 2 ]]; then
+    TIMEOUT_ERRORS=$(echo "$LAST_LOGS" | grep -A 1 "operation timed out")
+    if [[ $(echo "$TIMEOUT_ERRORS" | grep -c "operation timed out") -ge 2 ]]; then
         echo "$(date) - 检测到连续的超时错误，重启容器"
         restart_container
         return
